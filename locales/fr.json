@@ -30,5 +30,7 @@
     "buy": "Acheter",
     "treyler": "TREYLER",
     "free": "Jouer gratuitement",
-    "opens": "se connecter"
+    "opens": "se connecter",
+    "recovery": "réinitialiser le mot de passe",
+    "createAccount": "créer un compte"
   }

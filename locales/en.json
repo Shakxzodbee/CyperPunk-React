@@ -30,5 +30,7 @@
   "buy": "Buy",
   "treyler": "TRAILER",
   "free": "Play For free",
-  "opens": "LoGin"
+  "opens": "LoGin",
+  "recovery": "reset password",
+  "createAccount": "create an account"
 }

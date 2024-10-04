@@ -30,5 +30,7 @@
     "buy": "买",
     "treyler": "拖车",
     "free": "免费玩",
-    "opens": "登录"
+    "opens": "登录",
+    "recovery": "密码重置",
+    "createAccount": "创建一个帐户"
   }

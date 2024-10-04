@@ -26,10 +26,16 @@ const Modal = ({ isOpen, onClose }) => {
             <input type="email" required placeholder='gerg'/>
             <input type="password" required placeholder='stghsr'/>
           </form>
-          <button className='login-button'>Dalshe</button>
+          <button className='login-button'>
+          <FormattedMessage id='opens'/>
+          </button>
           <div className='login-options'>
-          <a href="#" id="recovery" className="recovery">aehsr</a>
-          <a href="#" id="createAccount" className="button">srthsrt</a>
+          <a href="#" className="recovery">
+            <FormattedMessage id='recovery'/>
+          </a>
+          <a href="#" className="button">
+            <FormattedMessage id='createAccount' />
+          </a>
           </div>
         </div>
       </div>
@@ -37,4 +43,4 @@ const Modal = ({ isOpen, onClose }) => {
   );
 };
 
-export default Modal; 
+export default Modal;
