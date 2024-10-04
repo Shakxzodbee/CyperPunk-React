@@ -32,5 +32,7 @@
     "free": "Jouer gratuitement",
     "opens": "se connecter",
     "recovery": "réinitialiser le mot de passe",
-    "createAccount": "créer un compte"
+    "createAccount": "créer un compte",
+    "placeholder": "entrez votre email",
+    "password": "entrez votre mot de passe"
   }

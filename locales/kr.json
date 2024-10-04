@@ -33,5 +33,7 @@
     "free": "무료로 플레이하세요",
     "opens": "로그인",
     "recovery": "비밀번호 재설정",
-    "createAccount": "계정을 생성하다"
+    "createAccount": "계정을 생성하다",
+    "placeholder": "이메일을 입력하세요",
+    "password": "비밀번호를 입력하세요"
 }

@@ -32,5 +32,7 @@
   "free": "Play For free",
   "opens": "LoGin",
   "recovery": "reset password",
-  "createAccount": "create an account"
+  "createAccount": "create an account",
+  "placeholder": "enter your email",
+  "password": "enter your password"
 }

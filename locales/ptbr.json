@@ -32,6 +32,8 @@
     "free":"Jogue de graça",
     "opens": "Conecte-se",
     "recovery": "restablecer contraseña",
-    "createAccount": "crear una cuentaa"
+    "createAccount": "crear una cuentaa",
+    "placeholder": "ingresa tu correo electrónico",
+    "password": "ingresa tu contraseña"
   
 }

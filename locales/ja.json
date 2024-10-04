@@ -32,5 +32,7 @@
     "free": "無料でプレイ",
     "opens": "ログイン",
     "recovery": "パスワードをリセット",
-    "createAccount": "アカウントを作成する"
+    "createAccount": "アカウントを作成する",
+    "placeholder": "メールアドレスを入力してください",
+    "password": "パスワードを入力してください"
 }
