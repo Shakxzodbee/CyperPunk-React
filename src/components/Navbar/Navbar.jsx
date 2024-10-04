@@ -1,83 +1,203 @@
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
+import { IntlProvider, FormattedMessage } from 'react-intl';
+import messages_en from '../../../locales/en.json';
+import messages_de from '../../../locales/de.json';
+import message_ru from '../../../locales/ru.json';
+import message_po from '../../../locales/po.json';
+import message_ptbr from '../../../locales/ptbr.json';
+
+const messages = {
+  en: messages_en,
+  de: messages_de,
+  ru: message_ru,
+  po: message_po,
+  pbr: message_ptbr,
+};
+
+
 function Navbar() {
+
+  const [locale, setLocale] = useState('en');
+
+  const changeLanguage = (lang) => {
+    setLocale(lang);
+  };
+
+  useEffect(() => {
+    document.title = messages[locale].title;
+  }, [locale]);
+
+
   return (
-    <header className="header" id="header">
-      <div className="header-top">
-        <a href="#" className="header-top__logo">
-          <img className="header-top__logo-yellow" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x" />
-          <img className="header-top__logo-black" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x" />
-        </a>
-        <div className="menu">
-          <ul className="menu-list">
-            <li className="menu-item">
-              <span className="menu-sub">Игры</span>
-              <ul className="menu-sub-list">
-                <li>
-                  <a href="#" id="farewell">Cyberpunk 2077</a>
-                </li>
-                <li>
-                  <a href="#" id="fravel2">Призрачная свобода</a>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item">
-              <span className="menu-sub" id="community" >Сообщество</span>
-              <ul className="menu-sub-list">
-                <li>
-                  <a href="#">Форум</a>
-                </li>
-                <li>
-                  <a href="#">Discord</a>
-                </li>
-                <li>
-                  <a href="#">ПОЛЕЗНЫЕ МАТЕРИАЛЫ</a>
-                </li>
-                <li>
-                  <a href="#">Калькулятор способностей</a>
-                </li>
-                <li>
-                  <a href="#">Игровой буклет</a>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item" id="myBtns">
-              <a href="#">Aккаунт</a>
-            </li>
-            <li className="menu-item menu-item-lang">
-              <span className="menu-sub">ru</span>
-              <ul className="menu-sub-list">
-                <li><a href="#">Английский</a></li>
-                <li><a href="#">Россия</a></li>
-                <li><a href="#">немецкий</a></li>
-                <li><a href="#">польский</a></li>
-                <li><a href="#">португальский (BR)</a></li>
-                <li><a href="#">Французский</a></li>
-                <li><a href="#">испанский</a></li>
-                <li><a href="#">испанский (MX)</a></li>
-                <li><a href="#">итальянский</a></li>
-                <li><a href="#">японский</a></li>
-                <li><a href="#">корейский</a></li>
-                <li><a href="#">Упрощенный к</a> </li>
-                <li><a href="#">Традиционный к</a></li>
-                <li><a href="#">арабский</a></li>
-              </ul>
-            </li>
-            <li className="menu-item menu-item-buy"><a href="#" id="buy">ВОЙТИ</a></li>
-          </ul>
-        </div>
-      </div>
-      <div className="header__content" id="headerLogo">
-        <img className="header__logo" src="https://i.imgur.com/vNBZEe9.png" srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x" />
-        <h1 className="header__title">Уже в продаже</h1>
-        <div className="header__buttons">
-          <a className="cp-btn cp-btn--yellow-rotated h6" href="#" id="myBtnss">
-            <span>Купить</span>
+    <IntlProvider locale={locale} messages={messages[locale]}>
+      <header className="header" id="header">
+        <div className="header-top">
+          <a href="#" className="header-top__logo">
+            <img className="header-top__logo-yellow" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x" />
+            <img className="header-top__logo-black" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x" />
           </a>
-          <a className="cp-btn cp-btn--yellow h6" href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K" id="mybtn" >
-            <span>ТРЕЙЛЕР</span>
-          </a>
+          <div className="menu">
+            <ul className="menu-list">
+              <li className="menu-item">
+                <span className="menu-sub">
+                  <FormattedMessage id="greeting" />
+                </span>
+                <ul className="menu-sub-list">
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id="farawell" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id="fravel2" />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="menu-item">
+                <span className="menu-sub">
+                  <FormattedMessage id="community" />
+                </span>
+                <ul className="menu-sub-list">
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='forum' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='discord' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='material' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='kankulator' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='buket' />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="menu-item" id="myBtns">
+                <a href="#">
+                  <FormattedMessage id='accaunt' />
+                </a>
+              </li>
+              <li className="menu-item menu-item-lang">
+                <span className="menu-sub">
+                  <FormattedMessage id='change' />
+                </span>
+                <ul className="menu-sub-list">
+                  <li>
+                    <a href="#" onClick={() => changeLanguage('en')}>
+                      <FormattedMessage id='en' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={() => changeLanguage('ru')}>
+                      <FormattedMessage id='ru' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={() => changeLanguage('de')}>
+                      <FormattedMessage id='de' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={() => changeLanguage('po')}>
+                      <FormattedMessage id='po' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={() => changeLanguage('pbr')}>
+                      <FormattedMessage id='pbr' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='fr' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='es' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='esp' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='it' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='ja' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='ko' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='ch' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='chs' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FormattedMessage id='ar' />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="menu-item menu-item-buy">
+                <a href="#">
+                  <FormattedMessage id='open' />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </header>
+        <div className="header__content" id="headerLogo">
+          <img className="header__logo" src="https://i.imgur.com/vNBZEe9.png" srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x" />
+          <h1 className="header__title">
+            <FormattedMessage id='headTitle'/>
+          </h1>
+          <div className="header__buttons">
+            <a className="cp-btn cp-btn--yellow-rotated h6" href="#" id="myBtnss">
+              <span>
+                <FormattedMessage id='buy'/>
+              </span>
+            </a>
+            <a className="cp-btn cp-btn--yellow h6" href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K" id="mybtn" >
+              <span>
+                <FormattedMessage id='treyler'/>
+              </span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </IntlProvider>
   )
 }
 export default Navbar
