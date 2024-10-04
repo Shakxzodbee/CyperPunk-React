@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ReactDOM from 'react-dom/client';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import messages_en from '../../../locales/en.json';
@@ -7,14 +9,15 @@ import message_ru from '../../../locales/ru.json';
 import message_po from '../../../locales/po.json';
 import message_ptbr from '../../../locales/ptbr.json';
 import message_fr from '../../../locales/fr.json';
-import message_es from '../../../locales/es.json' ;
-import message_esp from '../../../locales/esp.json' ;
-import message_it from '../../../locales/it.json' ;
-import message_ja from '../../../locales/ja.json' ;
-import message_kr from '../../../locales/kr.json' ;
+import message_es from '../../../locales/es.json';
+import message_esp from '../../../locales/esp.json';
+import message_it from '../../../locales/it.json';
+import message_ja from '../../../locales/ja.json';
+import message_kr from '../../../locales/kr.json';
 import message_ch from '../../../locales/ch.json';
 import message_chs from '../../../locales/chs.json';
 import message_ar from '../../../locales/ar.json'
+import Modal from '../Modal/Modal';
 
 const messages = {
   en: messages_en,
@@ -36,7 +39,7 @@ const messages = {
 
 function Navbar() {
 
-  const [locale, setLocale] = useState('en');
+  const [locale, setLocale] = useState('ru');
 
   const changeLanguage = (lang) => {
     setLocale(lang);
@@ -46,6 +49,14 @@ function Navbar() {
     document.title = messages[locale].title;
   }, [locale]);
 
+  const notify = () => toast("This button has no direction");
+
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
@@ -63,51 +74,51 @@ function Navbar() {
                 </span>
                 <ul className="menu-sub-list">
                   <li>
-                    <a href="#">
+                    <a href="#" onClick={notify}>
                       <FormattedMessage id="farawell" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" onClick={notify}>
                       <FormattedMessage id="fravel2" />
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="menu-item">
-                <span className="menu-sub">
+                <span className="menu-sub" onClick={notify}>
                   <FormattedMessage id="community" />
                 </span>
                 <ul className="menu-sub-list">
                   <li>
-                    <a href="#">
+                    <a href="#" onClick={notify}>
                       <FormattedMessage id='forum' />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" onClick={notify}>
                       <FormattedMessage id='discord' />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" onClick={notify}>
                       <FormattedMessage id='material' />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" onClick={notify}>
                       <FormattedMessage id='kankulator' />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" onClick={notify}>
                       <FormattedMessage id='buket' />
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="menu-item" id="myBtns">
-                <a href="#">
+                <a href="#" onClick={openModal}>
                   <FormattedMessage id='accaunt' />
                 </a>
               </li>
@@ -142,54 +153,54 @@ function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('fr')}>
+                    <a href="#" onClick={() => changeLanguage('fr')}>
                       <FormattedMessage id='fr' />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('es')}>
+                    <a href="#" onClick={() => changeLanguage('es')}>
                       <FormattedMessage id='es' />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('esp')}>
+                    <a href="#" onClick={() => changeLanguage('esp')}>
                       <FormattedMessage id='esp' />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('it')}>
+                    <a href="#" onClick={() => changeLanguage('it')}>
                       <FormattedMessage id='it' />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('ja')}>
+                    <a href="#" onClick={() => changeLanguage('ja')}>
                       <FormattedMessage id='ja' />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('kr')}>
+                    <a href="#" onClick={() => changeLanguage('kr')}>
                       <FormattedMessage id='ko' />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('ch')}>
+                    <a href="#" onClick={() => changeLanguage('ch')}>
                       <FormattedMessage id='ch' />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('chs')}>
+                    <a href="#" onClick={() => changeLanguage('chs')}>
                       <FormattedMessage id='chs' />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onClick={()=> changeLanguage('ar')}>
+                    <a href="#" onClick={() => changeLanguage('ar')}>
                       <FormattedMessage id='ar' />
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="menu-item menu-item-buy">
-                <a href="#">
+                <a href="#" onClick={openModal}>
                   <FormattedMessage id='open' />
                 </a>
               </li>
@@ -199,22 +210,24 @@ function Navbar() {
         <div className="header__content" id="headerLogo">
           <img className="header__logo" src="https://i.imgur.com/vNBZEe9.png" srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x" />
           <h1 className="header__title">
-            <FormattedMessage id='headTitle'/>
+            <FormattedMessage id='headTitle' />
           </h1>
           <div className="header__buttons">
             <a className="cp-btn cp-btn--yellow-rotated h6" href="#" id="myBtnss">
-              <span>
-                <FormattedMessage id='buy'/>
+              <span onClick={openModal}>
+                <FormattedMessage id='buy' />
+                <Modal isOpen={isModalOpen} onClose={closeModal} />
               </span>
             </a>
             <a className="cp-btn cp-btn--yellow h6" href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K" id="mybtn" >
               <span>
-                <FormattedMessage id='treyler'/>
+                <FormattedMessage id='treyler' />
               </span>
             </a>
           </div>
         </div>
       </header>
+      <ToastContainer />
     </IntlProvider>
   )
 }
