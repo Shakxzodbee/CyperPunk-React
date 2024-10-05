@@ -34,6 +34,7 @@
   "recovery": "Passwort zurücksetzen",
   "createAccount": "ein Konto erstellen",
   "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
-  "password": "Geben Sie Ihr Passwort ein"
+  "password": "Geben Sie Ihr Passwort ein",
+  "toast": "Dieser Knopf hat keine Richtung"
 
 }

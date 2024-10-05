@@ -34,6 +34,7 @@
     "recovery": "Reimposta password",
     "createAccount": "creare un account",
     "placeholder": "inserisci la tua email",
-    "password": "inserisci la tua password"
+    "password": "inserisci la tua password",
+    "toast": "questo pulsante non ha direzione"
 
   }

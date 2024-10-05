@@ -34,5 +34,6 @@
     "recovery": "restablecer contraseña",
     "createAccount": "crear una cuenta",
     "placeholder": "ingresa tu correo electrónico",
-    "password": "ingresa tu contraseña"
+    "password": "ingresa tu contraseña",
+    "toast": "este botón no tiene dirección"
   }

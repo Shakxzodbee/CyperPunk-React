@@ -49,7 +49,7 @@ function Navbar() {
     document.title = messages[locale].title;
   }, [locale]);
 
-  const notify = () => toast("This button has no direction");
+  const notify = () => toast(<FormattedMessage id="toast" />);
 
 
 

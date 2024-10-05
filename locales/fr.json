@@ -34,5 +34,6 @@
     "recovery": "réinitialiser le mot de passe",
     "createAccount": "créer un compte",
     "placeholder": "entrez votre email",
-    "password": "entrez votre mot de passe"
+    "password": "entrez votre mot de passe",
+    "toast": "ce bouton n'a aucune direction"
   }

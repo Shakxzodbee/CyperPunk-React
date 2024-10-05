@@ -35,5 +35,6 @@
     "recovery": "비밀번호 재설정",
     "createAccount": "계정을 생성하다",
     "placeholder": "이메일을 입력하세요",
-    "password": "비밀번호를 입력하세요"
+    "password": "비밀번호를 입력하세요",
+    "toast": "이 버튼에는 방향이 없습니다"
 }

@@ -34,5 +34,6 @@
   "recovery": "reset password",
   "createAccount": "create an account",
   "placeholder": "enter your email",
-  "password": "enter your password"
+  "password": "enter your password",
+  "toast": "this button has no direction"
 }

@@ -34,5 +34,6 @@
     "recovery": "密码重置",
     "createAccount": "创建一个帐户",
     "placeholder": "输入您的电子邮件",
-    "password": "输入您的密码"
+    "password": "输入您的密码",
+    "toast": "这个按钮没有方向"
   }

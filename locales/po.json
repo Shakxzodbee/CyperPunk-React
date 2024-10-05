@@ -34,5 +34,6 @@
     "recovery": "zresetuj hasło",
     "createAccount": "Utwórz konto",
     "placeholder": "wpisz swój e-mail",
-    "password": "wprowadź swoje hasło"
+    "password": "wprowadź swoje hasło",
+    "toast": "ten przycisk nie ma kierunku"
   }
