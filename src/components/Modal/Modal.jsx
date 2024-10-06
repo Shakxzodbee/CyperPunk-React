@@ -21,14 +21,8 @@ const Modal = ({ isOpen, onClose, setIsModalOpen }) => {
         </button>
         <div>
           <div className="steam-logo">
-            <a
-              href="https://epicapps.ru/ru/land/steam/?utm_source=direct&utm_medium=cpc&utm_campaign=steam-cis&utm_content=0&utm_term=---autotargeting&yclid=3913537345617919999"
-              className="a-teg"
-            >
-              <img
-                src="https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react//global/steam_icon.svg"
-                alt="Steam"
-              />
+            <a href="https://epicapps.ru/ru/land/steam/?utm_source=direct&utm_medium=cpc&utm_campaign=steam-cis&utm_content=0&utm_term=---autotargeting&yclid=3913537345617919999" className="a-teg">
+              <img src="https://cdn.akamai.steamstatic.com/apps/csgo/images/csgo_react//global/steam_icon.svg" alt="Steam" />
               <h2>
                 <FormattedMessage id="free" />
               </h2>
@@ -38,14 +32,8 @@ const Modal = ({ isOpen, onClose, setIsModalOpen }) => {
             <FormattedMessage id="opens" />
           </h2>
           <form action="" className="login-form">
-            <input
-              type="text"
-              placeholder={intl.formatMessage({ id: 'placeholder' })}
-            />
-            <input
-              type="password"
-              placeholder={intl.formatMessage({ id: 'password' })}
-            />
+            <input type="text" placeholder={intl.formatMessage({ id: 'placeholder' })}/>
+            <input type="password" placeholder={intl.formatMessage({ id: 'password' })}/>
           </form>
           <button className="login-button">
             <FormattedMessage id="opens" />
