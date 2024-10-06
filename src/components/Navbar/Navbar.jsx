@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { FormattedMessage, IntlProvider } from 'react-intl';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ReactDOM from 'react-dom/client';
-import { IntlProvider, FormattedMessage } from 'react-intl';
-import messages_en from '../../../locales/en.json';
+import message_ar from '../../../locales/ar.json';
+import message_ch from '../../../locales/ch.json';
+import message_chs from '../../../locales/chs.json';
 import messages_de from '../../../locales/de.json';
-import message_ru from '../../../locales/ru.json';
-import message_po from '../../../locales/po.json';
-import message_ptbr from '../../../locales/ptbr.json';
-import message_fr from '../../../locales/fr.json';
+import messages_en from '../../../locales/en.json';
 import message_es from '../../../locales/es.json';
 import message_esp from '../../../locales/esp.json';
+import message_fr from '../../../locales/fr.json';
 import message_it from '../../../locales/it.json';
 import message_ja from '../../../locales/ja.json';
 import message_kr from '../../../locales/kr.json';
-import message_ch from '../../../locales/ch.json';
-import message_chs from '../../../locales/chs.json';
-import message_ar from '../../../locales/ar.json'
+import message_po from '../../../locales/po.json';
+import message_ptbr from '../../../locales/ptbr.json';
+import message_ru from '../../../locales/ru.json';
 import Modal from '../Modal/Modal';
+import BurgerMenu from '../burder-menu/burger-menu';
+import Lang from '../lang/lang';
 
 const messages = {
   en: messages_en,
@@ -36,12 +37,10 @@ const messages = {
   ar: message_ar,
 };
 
-
 function Navbar() {
-
   const [locale, setLocale] = useState('ru');
 
-  const changeLanguage = (lang) => {
+  const changeLanguage = lang => {
     setLocale(lang);
   };
 
@@ -51,9 +50,9 @@ function Navbar() {
 
   const notify = () => toast(<FormattedMessage id="toast" />);
 
-
-
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [burgerMenu, setBurgerMenu] = useState(false);
+  const [lang, setLang] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -62,9 +61,36 @@ function Navbar() {
     <IntlProvider locale={locale} messages={messages[locale]}>
       <header className="header" id="header">
         <div className="header-top">
+          {/* burger menu */}
+          <div
+            onClick={() => setBurgerMenu(!burgerMenu)}
+            className="burger-menu"
+          >
+            <div className="menu-toggle" id="bars">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          {/* burgee menu */}
+          {burgerMenu && (
+            <BurgerMenu
+              setIsModalOpen={setIsModalOpen}
+              setBurgerMenu={setBurgerMenu}
+            />
+          )}
+
           <a href="#" className="header-top__logo">
-            <img className="header-top__logo-yellow" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x" />
-            <img className="header-top__logo-black" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x" />
+            <img
+              className="header-top__logo-yellow"
+              src="https://i.imgur.com/j3Za9uB.png"
+              srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x"
+            />
+            <img
+              className="header-top__logo-black"
+              src="https://i.imgur.com/j3Za9uB.png"
+              srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x"
+            />
           </a>
           <div className="menu">
             <ul className="menu-list">
@@ -92,136 +118,166 @@ function Navbar() {
                 <ul className="menu-sub-list">
                   <li>
                     <a href="#" onClick={notify}>
-                      <FormattedMessage id='forum' />
+                      <FormattedMessage id="forum" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={notify}>
-                      <FormattedMessage id='discord' />
+                      <FormattedMessage id="discord" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={notify}>
-                      <FormattedMessage id='material' />
+                      <FormattedMessage id="material" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={notify}>
-                      <FormattedMessage id='kankulator' />
+                      <FormattedMessage id="kankulator" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={notify}>
-                      <FormattedMessage id='buket' />
+                      <FormattedMessage id="buket" />
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="menu-item" id="myBtns">
                 <a href="#" onClick={openModal}>
-                  <FormattedMessage id='accaunt' />
+                  <FormattedMessage id="accaunt" />
                 </a>
               </li>
               <li className="menu-item menu-item-lang">
                 <span className="menu-sub">
-                  <FormattedMessage id='change' />
+                  <FormattedMessage id="change" />
                 </span>
                 <ul className="menu-sub-list">
                   <li>
                     <a href="#" onClick={() => changeLanguage('en')}>
-                      <FormattedMessage id='en' />
+                      <FormattedMessage id="en" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('ru')}>
-                      <FormattedMessage id='ru' />
+                      <FormattedMessage id="ru" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('de')}>
-                      <FormattedMessage id='de' />
+                      <FormattedMessage id="de" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('po')}>
-                      <FormattedMessage id='po' />
+                      <FormattedMessage id="po" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('pbr')}>
-                      <FormattedMessage id='pbr' />
+                      <FormattedMessage id="pbr" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('fr')}>
-                      <FormattedMessage id='fr' />
+                      <FormattedMessage id="fr" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('es')}>
-                      <FormattedMessage id='es' />
+                      <FormattedMessage id="es" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('esp')}>
-                      <FormattedMessage id='esp' />
+                      <FormattedMessage id="esp" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('it')}>
-                      <FormattedMessage id='it' />
+                      <FormattedMessage id="it" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('ja')}>
-                      <FormattedMessage id='ja' />
+                      <FormattedMessage id="ja" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('kr')}>
-                      <FormattedMessage id='ko' />
+                      <FormattedMessage id="ko" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('ch')}>
-                      <FormattedMessage id='ch' />
+                      <FormattedMessage id="ch" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('chs')}>
-                      <FormattedMessage id='chs' />
+                      <FormattedMessage id="chs" />
                     </a>
                   </li>
                   <li>
                     <a href="#" onClick={() => changeLanguage('ar')}>
-                      <FormattedMessage id='ar' />
+                      <FormattedMessage id="ar" />
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="menu-item menu-item-buy">
                 <a href="#" onClick={openModal}>
-                  <FormattedMessage id='open' />
+                  <FormattedMessage id="open" />
                 </a>
               </li>
             </ul>
           </div>
+
+          {/* ru eng */}
+          <div
+            onClick={() => setLang(!lang)}
+            style={{ cursor: 'pointer' }}
+            className="language-container"
+          >
+            <div style={{ display: 'flex' }} className="down">
+              <p id="changes">ru</p>
+              <i className="fa fa-caret-down"></i>
+            </div>
+          </div>
+
+          {lang && <Lang setLang={setLang} />}
         </div>
         <div className="header__content" id="headerLogo">
-          <img className="header__logo" src="https://i.imgur.com/vNBZEe9.png" srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x" />
+          <img
+            className="header__logo"
+            src="https://i.imgur.com/vNBZEe9.png"
+            srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x"
+          />
           <h1 className="header__title">
-            <FormattedMessage id='headTitle' />
+            <FormattedMessage id="headTitle" />
           </h1>
           <div className="header__buttons">
-            <a className="cp-btn cp-btn--yellow-rotated h6" href="#" id="myBtnss">
+            <a
+              className="cp-btn cp-btn--yellow-rotated h6"
+              href="#"
+              id="myBtnss"
+            >
               <span onClick={openModal}>
-                <FormattedMessage id='buy' />
-                <Modal isOpen={isModalOpen} onClose={closeModal} />
+                <FormattedMessage id="buy" />
+                <Modal
+                  setIsModalOpen={setIsModalOpen}
+                  isOpen={isModalOpen}
+                  onClose={closeModal}
+                />
               </span>
             </a>
-            <a className="cp-btn cp-btn--yellow h6" href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K" id="mybtn" >
+            <a
+              className="cp-btn cp-btn--yellow h6"
+              href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K"
+              id="mybtn"
+            >
               <span>
-                <FormattedMessage id='treyler' />
+                <FormattedMessage id="treyler" />
               </span>
             </a>
           </div>
@@ -229,6 +285,6 @@ function Navbar() {
       </header>
       <ToastContainer />
     </IntlProvider>
-  )
+  );
 }
-export default Navbar
+export default Navbar;
