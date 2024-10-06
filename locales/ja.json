@@ -41,5 +41,8 @@
     "parol": "パスワード",
     "Cyperinfo": "Cyber​​​​net Gamesからのニュース、アンケート、特別オファーを受け取る",
     "zapisaround": "利用規約を読み、同意します",
-    "contiune": "続く"
+    "contiune": "続く",
+    "resetpassword": "パスワードをリセットする",
+    "sbrosinfo": "セキュリティ コードを受信するには、サイバネット ゲーム アカウントの電子メール アドレスを入力してください。",
+    "resetmodal": "ログインページに戻る"
 }

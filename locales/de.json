@@ -41,6 +41,8 @@
   "parol": "Passwort",
   "Cyperinfo": "Senden Sie mir Neuigkeiten, Umfragen und Sonderangebote von Cybernet Games",
   "zapisaround": "Ich habe die Nutzungsbedingungen gelesen und akzeptiert",
-  "contiune": "weitermachen"
-
+  "contiune": "weitermachen",
+  "resetpassword": "Passwort zurücksetzen",
+  "sbrosinfo": "Um Ihren Sicherheitscode zu erhalten, geben Sie die E-Mail-Adresse Ihres Cybernet Games-Kontos ein.",
+  "resetmodal": "Zurück zur Anmeldeseite"
 }

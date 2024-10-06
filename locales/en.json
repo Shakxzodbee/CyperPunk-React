@@ -41,5 +41,8 @@
   "parol": "password",
   "Cyperinfo": "Send me news, surveys and special offers from Cyber​​net Games",
   "zapisaround": "I have read and accept the Terms of Service",
-  "contiune": "continue"
+  "contiune": "continue",
+  "resetpassword": "Reset password",
+  "sbrosinfo": "To receive your security code, please enter your Cybernet Games account email address.",
+  "resetmodal": "return to login page"
 }

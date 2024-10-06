@@ -42,6 +42,8 @@
     "parol": "비밀번호",
     "Cyperinfo": "Cyber​​net Games의 뉴스, 설문 조사 및 특별 행사를 보내주세요.",
     "zapisaround": "서비스 약관을 읽었으며 동의합니다.",
-    "contiune": "계속하다"
-  
+    "contiune": "계속하다",
+    "resetpassword": "비밀번호 재설정",
+    "sbrosinfo": "보안 코드를 받으려면 Cybernet Games 계정 이메일 주소를 입력하세요.",
+    "resetmodal": "로그인 페이지로 돌아가기"
 }
