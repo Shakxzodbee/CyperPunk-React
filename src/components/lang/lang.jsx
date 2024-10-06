@@ -1,9 +1,6 @@
-import React from 'react';
 import './lang.css';
 
 const Lang = ({ setLang }) => {
-
-  
   return (
     <div className="lang-menu-container">
       <div className="lang-menu-nav">
@@ -12,7 +9,7 @@ const Lang = ({ setLang }) => {
             <i className="fa-solid fa-xmark"></i>
           </div>
         </div>
-        <ul>
+        <ul className='ul'>
           <li>АНГЛИЙСКИЙ</li>
           <li>РОССИЯ</li>
           <li>НЕМЕЦКИЙ</li>

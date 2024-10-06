@@ -81,16 +81,8 @@ function Navbar() {
           )}
 
           <a href="#" className="header-top__logo">
-            <img
-              className="header-top__logo-yellow"
-              src="https://i.imgur.com/j3Za9uB.png"
-              srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x"
-            />
-            <img
-              className="header-top__logo-black"
-              src="https://i.imgur.com/j3Za9uB.png"
-              srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x"
-            />
+            <img className="header-top__logo-yellow" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x"/>
+            <img className="header-top__logo-black" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x"/>
           </a>
           <div className="menu">
             <ul className="menu-list">
@@ -234,13 +226,11 @@ function Navbar() {
           </div>
 
           {/* ru eng */}
-          <div
-            onClick={() => setLang(!lang)}
-            style={{ cursor: 'pointer' }}
-            className="language-container"
-          >
+          <div onClick={() => setLang(!lang)} style={{ cursor: 'pointer' }} className="language-container">
             <div style={{ display: 'flex' }} className="down">
-              <p id="changes">ru</p>
+              <p id="changes">
+                <FormattedMessage id="change" />
+                </p>
               <i className="fa fa-caret-down"></i>
             </div>
           </div>
@@ -248,20 +238,12 @@ function Navbar() {
           {lang && <Lang setLang={setLang} />}
         </div>
         <div className="header__content" id="headerLogo">
-          <img
-            className="header__logo"
-            src="https://i.imgur.com/vNBZEe9.png"
-            srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x"
-          />
+          <img className="header__logo" src="https://i.imgur.com/vNBZEe9.png" srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x"/>
           <h1 className="header__title">
             <FormattedMessage id="headTitle" />
           </h1>
           <div className="header__buttons">
-            <a
-              className="cp-btn cp-btn--yellow-rotated h6"
-              href="#"
-              id="myBtnss"
-            >
+            <a className="cp-btn cp-btn--yellow-rotated h6" href="#" id="myBtnss" >
               <span onClick={openModal}>
                 <FormattedMessage id="buy" />
                 <Modal
@@ -271,11 +253,7 @@ function Navbar() {
                 />
               </span>
             </a>
-            <a
-              className="cp-btn cp-btn--yellow h6"
-              href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K"
-              id="mybtn"
-            >
+            <a className="cp-btn cp-btn--yellow h6" href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K" id="mybtn">
               <span>
                 <FormattedMessage id="treyler" />
               </span>
