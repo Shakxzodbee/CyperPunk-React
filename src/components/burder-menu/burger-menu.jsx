@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './burger-menu.css';
 import { FormattedMessage, IntlProvider } from 'react-intl';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BurgerMenu = ({ setBurgerMenu, setIsModalOpen }) => {
   const [first, setFirst] = useState(false);
@@ -10,6 +12,9 @@ const BurgerMenu = ({ setBurgerMenu, setIsModalOpen }) => {
     setBurgerMenu(false);
     setIsModalOpen(true);
   };
+
+  const notify = () => toast(<FormattedMessage id="toast" />);
+
   return (
     <div className="burger-menu-container">
       <div className="burger-menu-nav">
@@ -32,7 +37,7 @@ const BurgerMenu = ({ setBurgerMenu, setIsModalOpen }) => {
               textTransform: 'uppercase',
               cursor: 'pointer',
             }}
-          > <FormattedMessage id="greeting" /> <i className="fa-solid fa-chevron-down"></i>
+           > <FormattedMessage id="greeting" /> <i className="fa-solid fa-chevron-down"></i>
           </h2>
           {first ? (
             <ul
@@ -42,8 +47,8 @@ const BurgerMenu = ({ setBurgerMenu, setIsModalOpen }) => {
                 fontSize: '20px',
               }}
             >
-              <li> <FormattedMessage id='farawell' /></li>
-              <li> <FormattedMessage id='fravel2' /></li>
+              <li onClick={notify}> <FormattedMessage id='farawell' /></li>
+              <li onClick={notify}> <FormattedMessage id='fravel2' /></li>
             </ul>
           ) : null}
         </div>
@@ -68,11 +73,11 @@ const BurgerMenu = ({ setBurgerMenu, setIsModalOpen }) => {
                 fontSize: '20px',
               }}
             >
-              <li><FormattedMessage id='forum' /></li>
-              <li><FormattedMessage id='discord' /></li>
-              <li><FormattedMessage id='material' /></li>
-              <li><FormattedMessage id='kankulator' /></li>
-              <li><FormattedMessage id='buket' /></li>
+              <li onClick={notify}><FormattedMessage id='forum' /></li>
+              <li onClick={notify}><FormattedMessage id='discord' /></li>
+              <li onClick={notify}><FormattedMessage id='material' /></li>
+              <li onClick={notify}><FormattedMessage id='kankulator' /></li>
+              <li onClick={notify}><FormattedMessage id='buket' /></li>
             </ul>
           ) : null}
         </div>
