@@ -35,5 +35,11 @@
     "createAccount": "アカウントを作成する",
     "placeholder": "メールアドレスを入力してください",
     "password": "パスワードを入力してください",
-    "toast": "このボタンには方向がありません"
+    "toast": "このボタンには方向がありません",
+    "createzavest": "アカウントを作成する",
+    "pochta": "電子メール",
+    "parol": "パスワード",
+    "Cyperinfo": "Cyber​​​​net Gamesからのニュース、アンケート、特別オファーを受け取る",
+    "zapisaround": "利用規約を読み、同意します",
+    "contiune": "続く"
 }

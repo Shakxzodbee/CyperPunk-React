@@ -35,6 +35,12 @@
   "createAccount": "ein Konto erstellen",
   "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
   "password": "Geben Sie Ihr Passwort ein",
-  "toast": "Dieser Knopf hat keine Richtung"
+  "toast": "Dieser Knopf hat keine Richtung",
+  "createzavest": "ein Konto erstellen",
+  "pochta": "E-Mail",
+  "parol": "Passwort",
+  "Cyperinfo": "Senden Sie mir Neuigkeiten, Umfragen und Sonderangebote von Cybernet Games",
+  "zapisaround": "Ich habe die Nutzungsbedingungen gelesen und akzeptiert",
+  "contiune": "weitermachen"
 
 }

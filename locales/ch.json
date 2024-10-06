@@ -35,5 +35,11 @@
     "createAccount": "创建一个帐户",
     "placeholder": "输入您的电子邮件",
     "password": "输入您的密码",
-    "toast": "这个按钮没有方向"
+    "toast": "这个按钮没有方向",
+    "createzavest": "创建一个帐户",
+    "pochta": "电子邮件",
+    "parol": "密码",
+    "Cyperinfo": "向我发送来自 Cyber​​net Games 的新闻、调查和特别优惠",
+    "zapisaround": "我已阅读并接受服务条款",
+    "contiune": "继续"
   }

@@ -35,5 +35,12 @@
     "createAccount": "Utwórz konto",
     "placeholder": "wpisz swój e-mail",
     "password": "wprowadź swoje hasło",
-    "toast": "ten przycisk nie ma kierunku"
+    "toast": "ten przycisk nie ma kierunku",
+    "createzavest": "Utwórz konto",
+    "pochta": "e-mail",
+    "parol": "hasło",
+    "Cyperinfo": "Wyślij mi wiadomości, ankiety i oferty specjalne od Cyber​​net Games",
+    "zapisaround": "Przeczytałem i akceptuję Warunki korzystania z usługi",
+    "contiune": "Kontynuować"
+  
   }

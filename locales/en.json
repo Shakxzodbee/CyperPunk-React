@@ -35,5 +35,11 @@
   "createAccount": "create an account",
   "placeholder": "enter your email",
   "password": "enter your password",
-  "toast": "this button has no direction"
+  "toast": "this button has no direction",
+  "createzavest": "create an account",
+  "pochta": "e-mail",
+  "parol": "password",
+  "Cyperinfo": "Send me news, surveys and special offers from Cyber​​net Games",
+  "zapisaround": "I have read and accept the Terms of Service",
+  "contiune": "continue"
 }

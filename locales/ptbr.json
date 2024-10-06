@@ -35,6 +35,12 @@
     "createAccount": "crear una cuentaa",
     "placeholder": "ingresa tu correo electrónico",
     "password": "ingresa tu contraseña",
-    "toast": "este botón no tiene dirección"
-  
+    "toast": "este botón no tiene dirección",
+    "createzavest": "crear una cuenta",
+    "pochta": "correo electrónico",
+    "parol": "contraseña",
+    "Cyperinfo": "Envíame noticias, encuestas y ofertas especiales de Cyber​​net Games",
+    "zapisaround": "He leído y acepto los Términos de Servicio",
+    "contiune": "continuar"  
+
 }

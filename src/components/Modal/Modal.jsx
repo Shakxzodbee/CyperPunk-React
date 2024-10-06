@@ -5,10 +5,6 @@ import ModalCbroc from '../modals/modal-cbroc';
 import ModalZapis from '../modals/modal-zapis';
 import './Modal.css'; // CSS faylini import qilamiz
 
-const messages = {
-  en: { placeholder: 'Type something...' },
-  uz: { placeholder: 'Biror narsa yozing...' },
-};
 
 const Modal = ({ isOpen, onClose, setIsModalOpen }) => {
   const [modalCbroc, setModalCbroc] = useState(false);
