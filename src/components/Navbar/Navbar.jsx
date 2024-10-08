@@ -39,9 +39,16 @@ const messages = {
 
 function Navbar() {
   const [locale, setLocale] = useState('ru');
+  const [open, setOpen] = useState(false)
+
+  const handleOpen = () => {
+    setOpen(!open)
+    console.log('clicked')
+  }
 
   const changeLanguage = lang => {
     setLocale(lang);
+    console.log("Language type: ", lang)
   };
 
   useEffect(() => {
@@ -58,7 +65,8 @@ function Navbar() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <IntlProvider locale={locale} messages={messages[locale]}>
+    <IntlProvider locale={locale} messages={messages[locale]} defaultLocale="en">
+
       <header className="header" id="header">
         <div className="header-top">
           {/* burger menu */}
@@ -80,9 +88,91 @@ function Navbar() {
             />
           )}
 
+
+          {open ? (
+            <div className="responsive_ul_ul_main_div">
+              <div onClick={handleOpen} className='responsive_div_close_icon'>
+              <i className="fa-solid fa-xmark"></i>
+              </div>
+              <ul className="responsive_ul_ul">
+                <li>
+                  <a href="#" onClick={() => changeLanguage('en')}>
+                    <FormattedMessage id="en" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('ru')}>
+                    <FormattedMessage id="ru" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('de')}>
+                    <FormattedMessage id="de" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('po')}>
+                    <FormattedMessage id="po" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('pbr')}>
+                    <FormattedMessage id="pbr" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('fr')}>
+                    <FormattedMessage id="fr" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('es')}>
+                    <FormattedMessage id="es" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('esp')}>
+                    <FormattedMessage id="esp" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('it')}>
+                    <FormattedMessage id="it" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('ja')}>
+                    <FormattedMessage id="ja" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('kr')}>
+                    <FormattedMessage id="ko" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('ch')}>
+                    <FormattedMessage id="ch" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('chs')}>
+                    <FormattedMessage id="chs" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => changeLanguage('ar')}>
+                    <FormattedMessage id="ar" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          ) : null}
+
           <a href="#" className="header-top__logo">
-            <img className="header-top__logo-yellow" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x"/>
-            <img className="header-top__logo-black" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x"/>
+            <img className="header-top__logo-yellow" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x" />
+            <img className="header-top__logo-black" src="https://i.imgur.com/j3Za9uB.png" srcSet="https://i.imgur.com/j3Za9uB.png 1x, https://i.imgur.com/j3Za9uB.png 2x" />
           </a>
           <div className="menu">
             <ul className="menu-list">
@@ -226,11 +316,19 @@ function Navbar() {
           </div>
 
           {/* ru eng */}
-          <div onClick={() => setLang(!lang)} style={{ cursor: 'pointer' }} className="language-container">
+          <div onClick={() => setLang(!lang)} style={{ cursor: 'pointer' }} className="language-container media_off">
             <div style={{ display: 'flex' }} className="down">
               <p id="changes">
                 <FormattedMessage id="change" />
-                </p>
+              </p>
+              <i className="fa fa-caret-down"></i>
+            </div>
+          </div>
+          <div onClick={handleOpen} className='media_onn'>
+            <div style={{ display: 'flex' }} className="down">
+              <p id="changes">
+                <FormattedMessage id="change" />
+              </p>
               <i className="fa fa-caret-down"></i>
             </div>
           </div>
@@ -238,7 +336,7 @@ function Navbar() {
           {lang && <Lang setLang={setLang} />}
         </div>
         <div className="header__content" id="headerLogo">
-          <img className="header__logo" src="https://i.imgur.com/vNBZEe9.png" srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x"/>
+          <img className="header__logo" src="https://i.imgur.com/vNBZEe9.png" srcSet="https://i.imgur.com/vNBZEe9.png 1x, https://i.imgur.com/swcCgza.png 2x" />
           <h1 className="header__title">
             <FormattedMessage id="headTitle" />
           </h1>

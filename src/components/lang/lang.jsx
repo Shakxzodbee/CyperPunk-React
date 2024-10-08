@@ -38,96 +38,96 @@ const Lang = ({ setLang }) => {
 
   const changeLanguage = lang => {
     setLocale(lang);
+    console.log("Language type: ", lang)
   };
 
   useEffect(() => {
     document.title = messages[locale].title;
   }, [locale]);
 
-
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
-    <div className="lang-menu-container">
-      <div className="lang-menu-nav">
-        <div style={{ width: '100%', textAlign: 'end' }}>
-          <div onClick={() => setLang(false)} style={{ cursor: 'pointer', fontSize: '20px' }}>
-            <i className="fa-solid fa-xmark"></i>
+      <div className="lang-menu-container">
+        <div className="lang-menu-nav">
+          <div style={{ width: '100%', textAlign: 'end' }}>
+            <div onClick={() => setLang(false)} style={{ cursor: 'pointer', fontSize: '20px' }}>
+              <i className="fa-solid fa-xmark"></i>
+            </div>
           </div>
+          <ul className='ul'>
+            <li>
+              <a href="#" onClick={() => changeLanguage('en')}>
+                <FormattedMessage id="en" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('ru')}>
+                <FormattedMessage id="ru" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('ch')}>
+                <FormattedMessage id="ch" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('po')}>
+                <FormattedMessage id="po" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('pbr')}>
+                <FormattedMessage id="pbr" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('fr')}>
+                <FormattedMessage id="fr" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('es')}>
+                <FormattedMessage id="es" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('esp')}>
+                <FormattedMessage id="esp" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('it')}>
+                <FormattedMessage id="it" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('ja')}>
+                <FormattedMessage id="ja" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('kr')}>
+                <FormattedMessage id="ko" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('ch')}>
+                <FormattedMessage id="ch" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('chs')}>
+                <FormattedMessage id="chs" />
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={() => changeLanguage('ar')}>
+                <FormattedMessage id="ar" />
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul className='ul'>
-          <li>
-            <a href="#" onClick={() => changeLanguage('en')}>
-              <FormattedMessage id="en" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('ru')}>
-              <FormattedMessage id="ru" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('de')}>
-              <FormattedMessage id="de" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('po')}>
-              <FormattedMessage id="po" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('pbr')}>
-              <FormattedMessage id="pbr" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('fr')}>
-              <FormattedMessage id="fr" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('es')}>
-              <FormattedMessage id="es" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('esp')}>
-              <FormattedMessage id="esp" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('it')}>
-              <FormattedMessage id="it" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('ja')}>
-              <FormattedMessage id="ja" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('kr')}>
-              <FormattedMessage id="ko" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('ch')}>
-              <FormattedMessage id="ch" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('chs')}>
-              <FormattedMessage id="chs" />
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={() => changeLanguage('ar')}>
-              <FormattedMessage id="ar" />
-            </a>
-          </li>
-        </ul>
       </div>
-    </div>
     </IntlProvider>
   );
 };
