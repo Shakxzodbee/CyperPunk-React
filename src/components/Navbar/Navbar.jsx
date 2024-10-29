@@ -307,7 +307,7 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li className="menu-item menu-item-buy">
+              <li className="menu-item menu-item-buy ">
                 <a href="#" onClick={openModal}>
                   <FormattedMessage id="open" />
                 </a>
@@ -341,7 +341,7 @@ function Navbar() {
             <FormattedMessage id="headTitle" />
           </h1>
           <div className="header__buttons">
-            <a className="cp-btn cp-btn--yellow-rotated h6" href="#" id="myBtnss" >
+            <a className="button_r_ccc goldDark_RzfQh h6" href="#" id="myBtnss">
               <span onClick={openModal}>
                 <FormattedMessage id="buy" />
                 <Modal
@@ -351,7 +351,7 @@ function Navbar() {
                 />
               </span>
             </a>
-            <a className="cp-btn cp-btn--yellow h6" href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K" id="mybtn">
+            <a className="button_r_ccc goldDark_RzfQh h6" href="https://youtu.be/FO14X9YAeps?si=Tzao0AwNI27w5o1K" id="mybtn">
               <span>
                 <FormattedMessage id="treyler" />
               </span>
