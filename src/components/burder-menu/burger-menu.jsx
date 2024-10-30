@@ -103,7 +103,7 @@ const BurgerMenu = ({ setBurgerMenu, setIsModalOpen }) => {
           }}
         >
           <a onClick={handleClose} className="cp-btn cp-btn--yellow h6" id="mybtn">
-            <span><FormattedMessage id='buy' /></span>
+            <span><FormattedMessage id='buy'/></span>
           </a>
         </div>
       </div>

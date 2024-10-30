@@ -307,7 +307,7 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li className="menu-item menu-item-buy ">
+              <li className="menu-item menu-item-buy">
                 <a href="#" onClick={openModal}>
                   <FormattedMessage id="open" />
                 </a>
@@ -324,7 +324,7 @@ function Navbar() {
               <i className="fa fa-caret-down"></i>
             </div>
           </div>
-          <div onClick={handleOpen} className='media_onn'>
+          <div onClick={handleOpen} className='media_onn '>
             <div style={{ display: 'flex' }} className="down">
               <p id="changes">
                 <FormattedMessage id="change" />
